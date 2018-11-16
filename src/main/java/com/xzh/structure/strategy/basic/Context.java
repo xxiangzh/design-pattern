@@ -1,4 +1,4 @@
-package com.xzh.structure.strategy;
+package com.xzh.structure.strategy.basic;
 
 /**
  * @author 向振华

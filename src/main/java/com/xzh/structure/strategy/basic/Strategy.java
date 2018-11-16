@@ -1,4 +1,4 @@
-package com.xzh.structure.strategy;
+package com.xzh.structure.strategy.basic;
 
 /**
  * 策略模式
