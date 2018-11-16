@@ -1,4 +1,4 @@
-package com.xzh.create;
+package com.xzh.create.singleton;
 
 /**
  * 安全的单例模式

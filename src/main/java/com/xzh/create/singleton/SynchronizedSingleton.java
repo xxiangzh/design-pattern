@@ -1,4 +1,4 @@
-package com.xzh.create;
+package com.xzh.create.singleton;
 
 /**
  * 双重加锁单例模式
