@@ -38,7 +38,8 @@ public class ProxyFactory implements MethodInterceptor {
     public Object intercept(Object obj, Method method, Object[] args, MethodProxy proxy) throws Throwable {
         System.out.println("cglibproxy开始事务...");
         //目标对象的方法
-        Object o = proxy.invokeSuper(obj, args);
+//        Object o = proxy.invokeSuper(obj, args);
+        Object o = method.invoke(target, args);
         System.out.println("cglibproxy提交事务...");
         return o;
     }
