@@ -28,4 +28,11 @@ public abstract class AbstractPageBuilder implements PageBuilder {
 
     //第二个模板方法
     protected abstract void appendBody(StringBuffer stringBuffer);
+
+    //钩子方法1
+    protected void appendMeta(StringBuffer stringBuffer){
+    }
+    //钩子方法2
+    protected void appendLink(StringBuffer stringBuffer){
+    }
 }
