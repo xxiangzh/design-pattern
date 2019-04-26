@@ -4,7 +4,7 @@ package com.xzh.structure.strategy.basic;
  * @author 向振华
  * @date 2018/11/16 13:56
  */
-public class Context {
+public class StrategyContext {
 
     private Strategy strategy;
 
@@ -12,10 +12,10 @@ public class Context {
         strategy.algorithm();
     }
 
-    public Context() {
+    public StrategyContext() {
     }
 
-    public Context(Strategy strategy) {
+    public StrategyContext(Strategy strategy) {
         this.strategy = strategy;
     }
 }
