@@ -28,7 +28,7 @@ public class StrategyFactory {
     }
 
     static {
-        map.put(1,new ConcreteStrategyA());
-        map.put(2,new ConcreteStrategyB());
+        map.put(1,new StrategyA());
+        map.put(2,new StrategyB());
     }
 }

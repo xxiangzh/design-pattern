@@ -7,7 +7,7 @@ package com.xzh.structure.strategy.basic;
 public class Test {
 
     public static void main(String[] args) {
-        StrategyContext strategyContext = new StrategyContext(new ConcreteStrategyA());
+        StrategyContext strategyContext = new StrategyContext(new StrategyA());
         strategyContext.method();
         Strategy strategy = StrategyFactory.getInstance().getStrategy(2);
         strategy.algorithm();
