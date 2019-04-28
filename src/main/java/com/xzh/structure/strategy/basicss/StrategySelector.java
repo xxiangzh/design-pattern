@@ -1,6 +1,5 @@
 package com.xzh.structure.strategy.basicss;
 
-import com.alibaba.fastjson.JSON;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.stereotype.Component;
@@ -25,9 +24,11 @@ public class StrategySelector {
         }
         for (Strategy strategy : strategies) {
             Algorithm annotation = AnnotationUtils.findAnnotation(strategy.getClass(), Algorithm.class);
+            if(annotation == null){
+                continue;
+            }
             map.put(annotation.value(), strategy);
         }
-        System.out.println("StrategyMap:"+JSON.toJSONString(map));
     }
 
     public void method(Integer type){
