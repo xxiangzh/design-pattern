@@ -1,5 +1,8 @@
 package com.xzh.behavior.proxy.dynamicproxys;
 
+import com.xzh.behavior.proxy.service.UserService;
+import com.xzh.behavior.proxy.service.impl.UserServiceImpl;
+
 import java.lang.reflect.Proxy;
 
 /**
@@ -10,15 +13,15 @@ public class Test {
     public static void main(String[] args) {
 
         //创建一个实例对象，这个对象是被代理的对象
-        StateService stateService = new StateServiceImpl();
+        UserService userService = new UserServiceImpl();
 
         //创建一个与代理对象相关联的InvocationHandler
-        StateProxy stateProxy = new StateProxy<StateService>(stateService);
+        UserProxy userProxy = new UserProxy<>(userService);
 
         //创建一个代理对象stateServiceProxy来代理stateService，代理对象的每个执行方法都会替换执行Invocation中的invoke方法
-        StateService stateServiceProxy = (StateService)Proxy.newProxyInstance(StateService.class.getClassLoader(), new Class<?>[]{StateService.class}, stateProxy);
+        UserService userServiceProxy = (UserService)Proxy.newProxyInstance(UserService.class.getClassLoader(), new Class<?>[]{UserService.class}, userProxy);
 
         //代理对象执行方法
-        stateServiceProxy.updateState();
+        userServiceProxy.save();
     }
 }
