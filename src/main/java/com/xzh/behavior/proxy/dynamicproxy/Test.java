@@ -2,21 +2,12 @@ package com.xzh.behavior.proxy.dynamicproxy;
 
 /**
  * @author 向振华
- * @date 2018/11/19 10:35
+ * @date 2019/04/30 10:47
  */
 public class Test {
     public static void main(String[] args) {
-        // 目标对象
-        IUserDao target = new UserDao();
-
-        // 【原始的类型 class cn.itcast.b_dynamic.UserDao】
-        System.out.println(target.getClass());
-
-        // 给目标对象，创建代理对象
-        IUserDao proxy = (IUserDao) new ProxyFactory(target).getProxyInstance();
-        // class $Proxy0   内存中动态生成的代理对象
-        System.out.println(proxy.getClass());
-        // 执行方法   【代理对象】
-        proxy.save();
+        UserProxy userProxy = new UserProxy(new UserServiceImpl());
+        UserService userService = userProxy.getProxyInstance();
+        userService.save();
     }
 }
