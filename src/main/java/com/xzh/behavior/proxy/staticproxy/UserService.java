@@ -1,10 +1,11 @@
 package com.xzh.behavior.proxy.staticproxy;
 
 /**
- * 接口
+ * 用户接口
+ *
  * @author 向振华
- * @date 2018/11/19 10:13
+ * @date 2019/04/30 10:21
  */
-public interface IUserDao {
+public interface UserService {
     void save();
 }
