@@ -1,5 +1,7 @@
 package com.xzh.behavior.proxy.staticproxy;
 
+import com.xzh.behavior.proxy.service.impl.UserServiceImpl;
+
 /**
  * @author 向振华
  * @date 2019/04/30 10:27

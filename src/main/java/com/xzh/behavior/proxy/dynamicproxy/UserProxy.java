@@ -1,5 +1,7 @@
 package com.xzh.behavior.proxy.dynamicproxy;
 
+import com.xzh.behavior.proxy.service.UserService;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
@@ -26,9 +28,9 @@ public class UserProxy{
                 new InvocationHandler() {
                     @Override
                     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-                        System.out.println("存前...");
+                        System.out.println("动态代理前...");
                         Object invoke = method.invoke(userServiceImpl, args);
-                        System.out.println("存后...");
+                        System.out.println("动态代理后...");
                         return invoke;
                     }
                 }

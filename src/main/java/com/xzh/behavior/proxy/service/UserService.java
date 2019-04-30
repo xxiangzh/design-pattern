@@ -1,4 +1,4 @@
-package com.xzh.behavior.proxy.staticproxy;
+package com.xzh.behavior.proxy.service;
 
 /**
  * 用户接口

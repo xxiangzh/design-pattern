@@ -1,4 +1,6 @@
-package com.xzh.behavior.proxy.dynamicproxy;
+package com.xzh.behavior.proxy.service.impl;
+
+import com.xzh.behavior.proxy.service.UserService;
 
 /**
  * 用户实现类
@@ -9,6 +11,6 @@ package com.xzh.behavior.proxy.dynamicproxy;
 public class UserServiceImpl implements UserService {
     @Override
     public void save() {
-        System.out.println("----dynamicproxy已经保存数据!----");
+        System.out.println("----保存----");
     }
 }

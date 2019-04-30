@@ -1,12 +1,14 @@
 package com.xzh.behavior.proxy.staticproxy;
 
+import com.xzh.behavior.proxy.service.UserService;
+
 /**
  * 用户代理
  *
  * @author 向振华
  * @date 2019/04/30 10:23
  */
-public class UserProxy implements UserService{
+public class UserProxy implements UserService {
     //接收保存目标对象
     private UserService userServiceImpl;
 
@@ -16,8 +18,8 @@ public class UserProxy implements UserService{
 
     @Override
     public void save() {
-        System.out.println("存前...");
+        System.out.println("静态代理前...");
         userServiceImpl.save();
-        System.out.println("存后...");
+        System.out.println("静态代理后...");
     }
 }
